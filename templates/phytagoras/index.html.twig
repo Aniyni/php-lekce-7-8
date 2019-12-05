@@ -1,0 +1,165 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PhytagorasController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Phytagoras">
+        <meta name="author" content="Anna">
+        <link rel="icon" href="favicon.ico">
+
+        <title>Starter Template for Bootstrap</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="starter-template.css" rel="stylesheet">
+    </head>
+    <body>
+    pythagor.jpg   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index-2.php">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="phytagoras.php">Pythagoras <span class="sr-only">(current)</span></a>
+                </li>
+                >
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="je-libo trojúhelník?" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Hledej trojúhelník</button>
+            </form>
+        </div>
+    </nav>
+    <main>
+        <div class="jumbotron">
+            <h1 class="display-4">Pythagoras a jeho trojúhelníky</h1>
+            <p></p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Kdo to vlastně byl</h2>
+                    <p>To jméno je dnes každému známé. Už žáčci na základní škole se s ním setkávají. Panuje obecná představa, že Pythagoras byl velkým antickým matematikem a jeho větu o pravoúhlém trojúhelníku zná každý. On sám by ale proti této představě jistě protestoval, protože se sice matematikou hluboce zabýval, ale považoval se především za filozofa. A fakt, že je znám hlavně díky větě, kterou nevynalezl, by ho určitě překvapil. Asi ne moc příjemně. </p>
+                </div>
+                <p class="col-md-6">
+                    <img alt="picture" src="pythagor.jpg" width="350px">
+                </p>
+            </div>
+
+            <p></p>
+            <p></p>
+            <div class="container">
+                <h3>A teď trochu té matematiky</h3>
+
+                <div>
+                    <p><table class="table table-bordered table-dark" style="float: left">
+                        <thead>
+                        <tr>
+                            <th scope="col" colspan="2">Obdélník</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Strana A</th>
+                            <td>{{a}} cm </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Strana B</th>
+                            <td>{{b}} cm </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Obvod obdélníku</th>
+                            <td>{{obdelnikobvod}} cm </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Obsah obdélníku</th>
+                            <td>{{obdelnikobsah}} cm2 </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table class="table table-bordered table-light">
+                        <thead>
+                        <tr>
+                            <th scope="col" colspan="2">Trojúhelník Rovnostranný</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Strana A</th>
+                            <td>{{strana}} cm </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Úhel</th>
+                            <td>{{uhel}} ° </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Výška trojúhelníku</th>
+                            <td>{{vyska}} cm </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Obsah trojúhelníku</th>
+                            <td>{{obsahtrojuhelniku}} cm2 </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <h3>Máte k trojúhelníkům nějaké dotazy? Napište nám!</h3>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="text" class="form-text" id="exampleInputEmail1" placeholder="sem email napište">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Obecný dotaz
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Konkrétní dotaz
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">No a tady se nás můžete zeptat:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Odtrojúhelníkovat</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; Anna Zbrklá, co jí nejdou dát dvě tabulky vedle sebe</p>
+    </footer>
+
+
+    </body>
+
+</div>
+{% endblock %}

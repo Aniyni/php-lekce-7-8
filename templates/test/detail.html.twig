@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+
+{% block body %}
+
+    <h1>Product index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ username }}</td>
+                <td>{{ password }}</td>
+                <td>{{ name }}</td>
+                <td>{{ age }}</td>
+                <td>
+            </tr>
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
